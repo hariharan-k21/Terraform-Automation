@@ -21,16 +21,16 @@ resource "aws_ecs_task_definition" "hariharan-k21" {
   family                   = "hariharan-k21"
   requires_compatibilities = ["FARGATE"]
   network_mode            = "awsvpc"
-  cpu                     = "1024"
-  memory                  = "4096"
+  cpu                     = "256"
+  memory                  = "512"
   execution_role_arn      = var.execution_role_arn
   task_role_arn           = var.task_role_arn
 
   container_definitions = jsonencode([{
     name      = var.container_name
     image     = var.container_image
-    cpu       = 1024
-    memory    = 4096
+    cpu       = 10
+    memory    = 512
     essential = true
     portMappings = [{
       containerPort = 80
