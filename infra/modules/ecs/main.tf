@@ -42,7 +42,7 @@ resource "aws_ecs_task_definition" "hariharan-k21" {
 resource "aws_ecs_service" "hariharan-k21" {
   name            = "hariharan-k21"
   cluster         = var.ecs_cluster_id  
-  task_definition = aws_ecs_task_definition.service.arn
+  task_definition = aws_ecs_task_definition.hariharan-k21.arn
   desired_count   = 1
   launch_type     = "FARGATE"
 
