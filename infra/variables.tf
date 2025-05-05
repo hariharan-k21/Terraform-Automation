@@ -24,3 +24,6 @@ variable "aws_account_id" {
   default     = "011528270926"
 }
 
+variable "acm_certificate_arn" {
+  type        = string
+}
