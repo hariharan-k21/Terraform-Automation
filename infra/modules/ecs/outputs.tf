@@ -16,6 +16,7 @@ output "ecs_task_definition_arn" {
 }
 
 output "ecs_service_name" {
+  description = "The name of the ECS Service"
   value       = aws_ecs_service.hariharan-k21.name
 }
 

@@ -44,8 +44,7 @@ variable "ecs_cluster_id" {
 }
 
 variable "cluster_name" {
-  type        = string
-  default     = "hariharan-k21"  
+  type        = string  
 }
 
 
@@ -70,3 +69,10 @@ variable "container_image" {
   type        = string
 }
 
+variable "ecs_task_definition" {
+  type        = string
+}
+
+variable "service_name" {
+  type        = string
+}

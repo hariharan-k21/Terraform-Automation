@@ -8,6 +8,10 @@ resource "aws_ecr_repository" "foo" {
   }
 
   tags = {
-    Name        = var.repository_name
+    Name = var.repository_name
+  }
+
+  lifecycle {
+    prevent_destroy = false
   }
 }

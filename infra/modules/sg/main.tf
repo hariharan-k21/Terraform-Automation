@@ -1,5 +1,5 @@
 resource "aws_security_group" "alb_sg" {
-  name   = "hariharan-k21"
+  name   = var.sg_name
   vpc_id = var.vpc_id
 
 
@@ -17,7 +17,7 @@ resource "aws_security_group" "alb_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  
+  # Traffic Allowing (ALB --> ECS)
   ingress {
     from_port   = var.container_port
     to_port     = var.container_port
@@ -33,8 +33,7 @@ resource "aws_security_group" "alb_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "hariharan-k21"
-  }
+  
 }
+
 

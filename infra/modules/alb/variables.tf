@@ -13,7 +13,15 @@ variable "vpc_id" {
 variable "alb_sg_id" {
   type = string
 }
+
 variable "acm_certificate_arn" {
   type        = string
 }
 
+variable "aws_lb_name" {
+  type        = string
+}
+
+variable "lb_target_group_name" {
+  type        = string
+}
